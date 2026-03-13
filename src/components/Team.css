@@ -1,0 +1,181 @@
+.team {
+    font-family: var(--font-body);
+}
+
+.team__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.team__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.team__top-row {
+    display: flex;
+    gap: 40px;
+}
+
+.team__statement-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.team__statement {
+    font-family: var(--font-body);
+    font-size: clamp(1.5rem, 4vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-white);
+    max-width: 90%;
+    margin: 0;
+}
+
+
+.team__grid-small {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.team__grid-large {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+.team__member-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--color-black);
+    transition: border-color var(--transition-fast);
+}
+
+.team__member-card:hover {
+    border-color: var(--border-color-hover);
+}
+
+.team__member-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-dark-2);
+    
+    filter: grayscale(100%) contrast(1.1);
+    transition: filter var(--transition-medium), transform var(--transition-medium);
+}
+
+.team__member-card:hover .team__member-img {
+    filter: grayscale(0%) contrast(1);
+}
+
+
+.team-img-2,
+.team-img-3 {
+    background-image: url('/images/teams/genta-pramudya.jpeg');
+    background-position: center 20%;
+    background-size: cover;
+}
+
+.team-img-4,
+.team-img-5,
+.team-img-6 {
+    
+    background: radial-gradient(circle at center, #374151 0%, #111827 100%);
+}
+
+.team-img-1 {
+    background-image: url('/images/teams/fadel-febrian.jpeg');
+    background-position: center 20%;
+    background-size: cover;
+}
+
+.team__member-info {
+    padding: 20px;
+}
+
+.team__member-info h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.team__member-info p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-gray-light);
+}
+
+
+.team__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.team__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.team__btn:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+}
+
+.team__btn:hover svg {
+    transform: translate(2px, -2px);
+}
+
+.team__btn svg {
+    transition: transform var(--transition-fast);
+}
+
+
+@media (max-width: 1024px) {
+    .team__top-row {
+        flex-direction: column;
+    }
+
+    .team__statement {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .team__grid-large {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .team__grid-small,
+    .team__grid-large {
+        grid-template-columns: 1fr;
+    }
+}

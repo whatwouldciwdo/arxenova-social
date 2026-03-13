@@ -1,0 +1,152 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--color-black);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+
+.hero__title {
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    font-weight: 900;
+    text-align: center;
+    color: var(--color-white);
+    letter-spacing: -3px;
+    line-height: 1.0;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    animation: heroTitleIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes heroTitleIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero__pills {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 40px;
+    flex: 1;
+    min-height: 0;
+}
+
+.hero__pill {
+    flex: 1;
+    min-height: 400px;
+    height: 55vh;
+    border-radius: 999px;
+    overflow: hidden;
+    animation: pillIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(60px);
+    position: relative;
+    cursor: pointer;
+}
+
+.hero__pill:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__pill:hover .hero__pill-image {
+    transform: scale(1.1);
+}
+
+@keyframes pillIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__pill-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero__pill-image {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/hero-art.png');
+    background-size: 900px auto;
+    background-repeat: no-repeat;
+    transition: transform var(--transition-slow);
+}
+
+
+.hero__pill:nth-child(1) .hero__pill-image {
+    background-position: 0% 40%;
+}
+
+.hero__pill:nth-child(2) .hero__pill-image {
+    background-position: 16.6% 40%;
+}
+
+.hero__pill:nth-child(3) .hero__pill-image {
+    background-position: 33.3% 40%;
+}
+
+.hero__pill:nth-child(4) .hero__pill-image {
+    background-position: 50% 40%;
+}
+
+.hero__pill:nth-child(5) .hero__pill-image {
+    background-position: 66.6% 40%;
+}
+
+.hero__pill:nth-child(6) .hero__pill-image {
+    background-position: 83.3% 40%;
+}
+
+.hero__pill:nth-child(7) .hero__pill-image {
+    background-position: 100% 40%;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero__title {
+        margin-bottom: 32px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero__pills {
+        gap: 8px;
+        padding: 0 20px;
+    }
+
+    .hero__pill {
+        min-height: 240px;
+        height: 40vh;
+    }
+
+    .hero__pill-image {
+        background-size: 500px auto;
+    }
+}

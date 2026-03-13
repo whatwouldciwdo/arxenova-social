@@ -1,0 +1,151 @@
+.recent-works {
+    font-family: var(--font-body);
+}
+
+.recent-works__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.recent-works__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.recent-works__card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition-fast);
+}
+
+.recent-works__card:hover {
+    border-color: var(--border-color-hover);
+}
+
+.recent-works__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-dark-2);
+    position: relative;
+}
+
+.recent-works__logo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: opacity 0.4s ease, backdrop-filter 0.4s ease;
+    z-index: 2;
+}
+
+.recent-works__logo-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.recent-works__logo-wrapper .img-contain {
+    object-fit: contain;
+}
+
+
+.recent-works__card:hover .recent-works__logo-overlay {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+
+
+.work-img-1 {
+    background: url('/images/portfolio/otobi/otobi-arxenova-portfolio.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.work-img-2 {
+    background: url('/images/portfolio/putrajayantara-ananta/putrajayantara-ananta-valve.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.work-img-3 {
+    background: repeating-radial-gradient(circle at 0 0, transparent 0, var(--color-black) 40px), repeating-linear-gradient(#f8fafc, #f8fafc);
+}
+
+.work-img-4 {
+    background: url('/images/portfolio/berdikariraya/berdikari-arxenova.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.work-img-5 {
+    background: url('/images/portfolio/plnindonesiapower/plnindonesiapower-arxenova.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.recent-works__info {
+    padding: 24px;
+}
+
+.recent-works__info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+
+.recent-works__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.recent-works__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.recent-works__btn:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+}
+
+.recent-works__btn:hover svg {
+    transform: translate(2px, -2px);
+}
+
+.recent-works__btn svg {
+    transition: transform var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+    .recent-works__grid {
+        grid-template-columns: 1fr;
+    }
+}

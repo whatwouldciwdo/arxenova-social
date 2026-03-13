@@ -1,0 +1,238 @@
+.footer {
+    font-family: var(--font-body);
+    padding-bottom: 24px;
+}
+
+.footer__grid {
+    display: grid;
+    
+    grid-template-columns: 35% 30% 35%;
+    grid-template-rows: auto auto;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+
+.footer__block {
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.footer__nav-block,
+.footer__email-block,
+.footer__copy-block,
+.footer__social-block {
+    
+    border-right: none;
+    border-bottom: none;
+}
+
+
+.footer__brand-block {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    border-right: 1px solid var(--border-color);
+    justify-content: center;
+}
+
+.footer__nav-block {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    justify-content: center;
+}
+
+.footer__email-block {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    border-bottom: 1px solid var(--border-color);
+    justify-content: center;
+}
+
+.footer__blog-block {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    border-right: 1px solid var(--border-color);
+    justify-content: center;
+}
+
+
+
+.footer {
+    font-family: var(--font-body);
+    padding-bottom: 24px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 30% 25% 20% 25%;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    min-height: 200px;
+}
+
+
+.footer__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+
+.footer__brand-block {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    border-right: 1px solid var(--border-color);
+}
+
+.footer__nav-block {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer__email-block {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.footer__blog-block {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-right: 1px solid var(--border-color);
+}
+
+.footer__social-block {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    border-right: 1px solid var(--border-color);
+}
+
+.footer__copy-block {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.footer__email {
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.footer__email:hover {
+    color: var(--color-gray-light);
+}
+
+.footer__blog-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.footer__blog-link:hover {
+    color: var(--color-gray-light);
+}
+
+.footer__socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer__socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-dark-3);
+    color: var(--color-gray-light);
+    transition: all var(--transition-fast);
+}
+
+.footer__socials a:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.footer__copyright {
+    font-size: 0.85rem;
+    color: var(--color-gray-light);
+}
+
+
+@media (max-width: 1024px) {
+    .footer__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .footer__brand-block {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 40px;
+    }
+
+    .footer__nav-block {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        border-right: none;
+    }
+
+    .footer__email-block {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .footer__blog-block {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .footer__social-block {
+        grid-column: 1 / -1;
+        grid-row: 5;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .footer__copy-block {
+        grid-column: 1 / -1;
+        grid-row: 6;
+    }
+}

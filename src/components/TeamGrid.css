@@ -1,0 +1,130 @@
+.team-page-grid {
+    font-family: var(--font-body);
+    padding-top: 200px;
+    
+}
+
+.team-page__header {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.team-page__title-col {
+    padding: 40px;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.team-page__title-col h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.team-page__desc-col {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.team-page__desc-col p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 1.4;
+    margin: 0;
+    max-width: 600px;
+}
+
+.team-page__members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.team-page__member-card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+}
+
+.team-page__member-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-dark-2);
+    filter: grayscale(100%) contrast(1.1);
+    transition: filter var(--transition-medium);
+}
+
+.team-page__member-card:hover .team-page__member-image {
+    filter: grayscale(0%) contrast(1);
+}
+
+.team-page__member-info {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.team-page__member-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--color-white);
+}
+
+.team-page__member-info p {
+    font-size: 0.85rem;
+    color: var(--color-gray-light);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .team-page__members {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-page__header {
+        grid-template-columns: 1fr;
+    }
+
+    .team-page__title-col {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .team-page__members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-page__members {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.team-img-2,
+.team-img-3,
+.team-img-4,
+.team-img-5,
+.team-img-6 {
+    background: radial-gradient(circle at center, #374151 0%, #111827 100%);
+}
+
+.team-img-1 {
+    background-image: url('/images/teams/fadel-febrian.jpeg');
+    background-position: center 20%;
+}
