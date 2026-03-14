@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -68,6 +69,30 @@ const portfolios = {
         img3Alt: "Industrial Lockout Tagout safety procedures",
     }
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const data = portfolios[slug as keyof typeof portfolios];
+
+    if (!data) {
+        return {
+            title: "Case Study Not Found | Arxenova-Social",
+            description: "This portfolio case study could not be found.",
+        };
+    }
+
+    return {
+        title: `${data.title} | Arxenova-Social Portfolio`,
+        description: data.desc,
+        keywords: ["Arxenova portfolio", data.title, data.meta2, "case study", "digital agency"],
+        openGraph: {
+            title: `${data.title} | Arxenova-Social Portfolio`,
+            description: data.desc,
+            type: "article",
+            images: [{ url: data.img1 }],
+        },
+    };
+}
 
 export default async function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
