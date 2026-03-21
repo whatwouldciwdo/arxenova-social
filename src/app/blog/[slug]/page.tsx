@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import BlogDetailClient, { blogData } from "./BlogDetailClient";
 
+export async function generateStaticParams() {
+    return Object.keys(blogData).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const post = blogData[slug as keyof typeof blogData];

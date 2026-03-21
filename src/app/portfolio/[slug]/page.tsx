@@ -70,6 +70,10 @@ const portfolios = {
     }
 };
 
+export async function generateStaticParams() {
+    return Object.keys(portfolios).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const data = portfolios[slug as keyof typeof portfolios];
