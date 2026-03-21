@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import "./EmailPanel.css";
 
 const SENDERS = [
-    { key: "brian", label: "Brian", email: "brian@arxenovasocial.com" },
-    { key: "dzul", label: "Dzul", email: "dzul@arxenovasocial.com" },
+    { key: "brian", label: "Brian" },
+    { key: "dzul", label: "Dzul" },
 ];
 
 const getTemplateBody = (senderName: string) => ({
@@ -253,7 +253,7 @@ export default function EmailPanel() {
                                 <div className="select-wrapper">
                                     <select value={sender} onChange={(e) => handleSenderChange(e.target.value)}>
                                         {SENDERS.map((s) => (
-                                            <option key={s.key} value={s.key}>{s.label} — {s.email}</option>
+                                            <option key={s.key} value={s.key}>{s.label}</option>
                                         ))}
                                     </select>
                                     <svg className="select-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -268,7 +268,7 @@ export default function EmailPanel() {
                                 </div>
                                 <div>
                                     <span className="sender-preview__name">{selectedSenderObj?.label}</span>
-                                    <span className="sender-preview__email">{selectedSenderObj?.email}</span>
+                                    <span className="sender-preview__email">{selectedSenderObj?.key}@arxenovasocial.com</span>
                                 </div>
                             </div>
                         </div>

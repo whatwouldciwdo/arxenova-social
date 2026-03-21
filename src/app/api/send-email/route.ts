@@ -3,20 +3,19 @@ import nodemailer from "nodemailer";
 import path from "path";
 import fs from "fs";
 
-const SENDERS: Record<string, { name: string; email: string; userEnv: string; passEnv: string }> = {
+const SENDERS: Record<string, { name: string; userEnv: string; passEnv: string }> = {
     brian: {
         name: "Brian - Arxenova Social",
-        email: "brian@arxenovasocial.com",
         userEnv: "SMTP_USER_BRIAN",
         passEnv: "SMTP_PASS_BRIAN",
     },
     dzul: {
         name: "Dzul - Arxenova Social",
-        email: "dzul@arxenovasocial.com",
         userEnv: "SMTP_USER_DZUL",
         passEnv: "SMTP_PASS_DZUL",
     },
 };
+
 
 export async function POST(req: NextRequest) {
     try {
@@ -151,7 +150,7 @@ export async function POST(req: NextRequest) {
                             <a href="https://arxenovasocial.com" style="font-size: 13px; color: #2B35E0; text-decoration: none;">🌐 arxenovasocial.com</a>
                         </td>
                         <td style="padding-right: 20px;">
-                            <a href="mailto:${senderConfig.email}" style="font-size: 13px; color: #2B35E0; text-decoration: none;">✉️ ${senderConfig.email}</a>
+                            <a href="mailto:${smtpUser}" style="font-size: 13px; color: #2B35E0; text-decoration: none;">✉️ ${smtpUser}</a>
                         </td>
                     </tr>
                     <tr>
@@ -185,7 +184,7 @@ export async function POST(req: NextRequest) {
         `;
 
         await transporter.sendMail({
-            from: `"${senderConfig.name}" <${senderConfig.email}>`,
+            from: `"${senderConfig.name}" <${smtpUser}>`,
             to: recipientEmail,
             subject: subject,
             html: htmlBody,
