@@ -1,0 +1,587 @@
+/* Password Gate */
+.password-gate {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-gate__card {
+    background: var(--color-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: slideDown 0.4s ease;
+}
+
+.password-gate__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    margin: 0 auto 20px;
+}
+
+.password-gate__card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.password-gate__card > p {
+    font-size: 0.85rem;
+    color: var(--color-gray-light);
+    margin-bottom: 28px;
+}
+
+.password-gate__card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.password-gate__card input {
+    width: 100%;
+    background: var(--color-dark-2);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.password-gate__card input::placeholder {
+    color: var(--color-gray);
+    letter-spacing: 0;
+}
+
+.password-gate__card input:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(43, 53, 224, 0.15);
+}
+
+.password-gate__error {
+    font-size: 0.8rem;
+    color: var(--color-magenta);
+    font-weight: 500;
+}
+
+.password-gate__card button[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--color-blue), #4f58e8);
+    color: var(--color-white);
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 20px rgba(43, 53, 224, 0.3);
+    margin-top: 4px;
+}
+
+.password-gate__card button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 28px rgba(43, 53, 224, 0.45);
+}
+
+.password-gate__card button[type="submit"]:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Email Panel Page */
+.email-panel-page {
+    min-height: 100vh;
+    background-color: var(--color-black);
+    padding: 32px;
+}
+
+.email-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.email-panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.email-panel__header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.email-panel__logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+}
+
+.email-panel__header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.2;
+}
+
+.email-panel__subtitle {
+    font-size: 0.8rem;
+    color: var(--color-gray-light);
+    margin-top: 2px;
+}
+
+/* Toast */
+.email-panel__toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    animation: slideDown 0.3s ease;
+}
+
+.toast--success {
+    background: rgba(0, 229, 204, 0.1);
+    border: 1px solid rgba(0, 229, 204, 0.3);
+    color: var(--color-cyan);
+}
+
+.toast--error {
+    background: rgba(255, 45, 123, 0.1);
+    border: 1px solid rgba(255, 45, 123, 0.3);
+    color: var(--color-magenta);
+}
+
+.toast__close {
+    margin-left: auto;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+
+.toast__close:hover {
+    opacity: 1;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Body Layout */
+.email-panel__body {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Card */
+.email-panel__card {
+    background: var(--color-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.card__title {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Fields */
+.field {
+    margin-bottom: 16px;
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+.field label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-gray-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: var(--color-magenta);
+}
+
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    background: var(--color-dark-2);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    outline: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--color-gray);
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(43, 53, 224, 0.15);
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 200px;
+    line-height: 1.6;
+}
+
+/* Select Wrapper */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.select-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-light);
+    pointer-events: none;
+}
+
+/* Sender Preview */
+.sender-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--color-dark-2);
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.sender-preview__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-white);
+    flex-shrink: 0;
+}
+
+.sender-preview__name {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.sender-preview__email {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-gray-light);
+    margin-top: 1px;
+}
+
+/* Template Buttons */
+.template-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.template-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--color-dark-2);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--color-white-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.template-btn:hover {
+    background: var(--color-dark-3);
+    border-color: var(--border-color-hover);
+    color: var(--color-white);
+}
+
+/* Attachment */
+.attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--color-dark-2);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.attachment-item__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 107, 90, 0.12);
+    color: var(--color-coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.attachment-item__info {
+    min-width: 0;
+    flex: 1;
+}
+
+.attachment-item__name {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attachment-item__meta {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--color-gray-light);
+    margin-top: 2px;
+}
+
+.attachment-item__badge {
+    padding: 4px 10px;
+    background: rgba(255, 107, 90, 0.12);
+    color: var(--color-coral);
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* Compose Card */
+.compose-card {
+    margin-bottom: 0;
+}
+
+.compose-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.field-row .field {
+    margin-bottom: 0;
+}
+
+/* Compose Actions */
+.compose-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.compose-actions__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--color-gray-light);
+}
+
+/* Send Button */
+.btn-send {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--color-blue), #4f58e8);
+    color: var(--color-white);
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 20px rgba(43, 53, 224, 0.3);
+}
+
+.btn-send:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 28px rgba(43, 53, 224, 0.45);
+}
+
+.btn-send:active {
+    transform: translateY(0);
+}
+
+.btn-send--loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Spinner */
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--color-white);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .email-panel__body {
+        grid-template-columns: 1fr;
+    }
+
+    .email-panel__sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .email-panel__sidebar .email-panel__card {
+        margin-bottom: 0;
+    }
+
+    .email-panel__sidebar .email-panel__card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .email-panel-page {
+        padding: 16px;
+    }
+
+    .email-panel__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .email-panel__sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .email-panel__sidebar .email-panel__card:last-child {
+        grid-column: auto;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .compose-actions {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .compose-actions__info {
+        justify-content: center;
+    }
+
+    .btn-send {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .email-panel__card {
+        padding: 20px;
+    }
+}
