@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-DL9EGEK5XR";
+const GOOGLE_ADS_ID = "AW-18032333414";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arxenovasocial.com"),
@@ -43,6 +44,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
       </head>
