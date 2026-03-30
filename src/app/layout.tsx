@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const GA_MEASUREMENT_ID = "G-DL9EGEK5XR";
 const GOOGLE_ADS_ID = "AW-18032333414";
@@ -48,7 +49,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
