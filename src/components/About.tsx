@@ -54,7 +54,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="about__services">
+                <div className="about__services" id="services">
                     <div className="about__services-header">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="9 10 4 15 9 20" />

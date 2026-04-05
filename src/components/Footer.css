@@ -141,6 +141,14 @@
     font-weight: 600;
 }
 
+.footer__nav a {
+    transition: color var(--transition-fast);
+}
+
+.footer__nav a:hover {
+    color: var(--color-gray-light);
+}
+
 .footer__email {
     font-size: 1.25rem;
     font-weight: 600;
@@ -151,18 +159,6 @@
     color: var(--color-gray-light);
 }
 
-.footer__blog-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: color var(--transition-fast);
-}
-
-.footer__blog-link:hover {
-    color: var(--color-gray-light);
-}
 
 .footer__socials {
     display: flex;

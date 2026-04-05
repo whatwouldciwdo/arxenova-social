@@ -35,7 +35,7 @@ const works = [
 
 export default function RecentWorks() {
     return (
-        <section className="recent-works section" id="works">
+        <section className="recent-works section" id="portfolio">
             <div className="container">
                 <div className="recent-works__header">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
