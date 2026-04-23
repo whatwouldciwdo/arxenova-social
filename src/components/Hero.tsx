@@ -1,20 +1,6 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import "./Hero.css";
 
 export default function Hero() {
-    const pillsRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const pills = pillsRef.current?.querySelectorAll(".hero__pill");
-        if (!pills) return;
-
-        pills.forEach((pill, index) => {
-            (pill as HTMLElement).style.animationDelay = `${index * 0.1}s`;
-        });
-    }, []);
-
     return (
         <section className="hero" id="home">
             <div className="hero__content">
@@ -24,7 +10,7 @@ export default function Hero() {
                     digital agency
                 </h1>
 
-                <div className="hero__pills" ref={pillsRef}>
+                <div className="hero__pills">
                     {Array.from({ length: 7 }).map((_, i) => (
                         <div key={i} className="hero__pill" style={{ '--pill-index': i } as React.CSSProperties}>
                             <div className="hero__pill-inner">

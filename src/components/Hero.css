@@ -57,6 +57,7 @@
     border-radius: 999px;
     overflow: hidden;
     animation: pillIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: calc(var(--pill-index) * 0.1s);
     opacity: 0;
     transform: translateY(60px);
     position: relative;
