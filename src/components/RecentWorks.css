@@ -73,13 +73,13 @@
 
 
 .work-img-1 {
-    background: url('/images/portfolio/otobi/otobi-arxenova-portfolio.jpg');
+    background: url('/images/portfolio/otobi/otobi-arxenova-portfolio.webp');
     background-size: cover;
     background-position: center;
 }
 
 .work-img-2 {
-    background: url('/images/portfolio/putrajayantara-ananta/putrajayantara-ananta-valve.jpg');
+    background: url('/images/portfolio/putrajayantara-ananta/putrajayantara-ananta-valve.webp');
     background-size: cover;
     background-position: center;
 }
@@ -89,13 +89,13 @@
 }
 
 .work-img-4 {
-    background: url('/images/portfolio/berdikariraya/berdikari-arxenova.jpg');
+    background: url('/images/portfolio/berdikariraya/berdikari-arxenova.webp');
     background-size: cover;
     background-position: center;
 }
 
 .work-img-5 {
-    background: url('/images/portfolio/plnindonesiapower/plnindonesiapower-arxenova.jpg');
+    background: url('/images/portfolio/plnindonesiapower/plnindonesiapower-arxenova.webp');
     background-size: cover;
     background-position: center;
 }

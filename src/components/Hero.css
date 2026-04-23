@@ -90,7 +90,7 @@
 .hero__pill-image {
     position: absolute;
     inset: 0;
-    background-image: url('/images/hero-art.png');
+    background-image: url('/images/hero-art.webp');
     background-size: 900px auto;
     background-repeat: no-repeat;
     transition: transform var(--transition-slow);
