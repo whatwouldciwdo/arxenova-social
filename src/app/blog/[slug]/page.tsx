@@ -20,11 +20,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: `${post.title} | Arxenova-Social Blog`,
         description: post.description,
         keywords: ["Arxenova blog", post.title, "digital marketing", "social media", "SEO"],
+        alternates: {
+            canonical: `https://arxenovasocial.com/blog/${slug}`,
+        },
         openGraph: {
             title: `${post.title} | Arxenova-Social Blog`,
             description: post.description,
             type: "article",
-            images: [{ url: post.heroImage }],
+            url: `https://arxenovasocial.com/blog/${slug}`,
+            images: [{ url: post.heroImage, width: 1200, height: 630, alt: post.title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${post.title} | Arxenova-Social Blog`,
+            description: post.description,
+            images: [post.heroImage || "https://arxenovasocial.com/og-image.png"],
         },
     };
 }

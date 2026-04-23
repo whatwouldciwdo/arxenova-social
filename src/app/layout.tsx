@@ -72,6 +72,23 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Arxenova-Social",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Arxenova-Social — Creative Social Media Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arxenova-Social | Creative Social Media Agency",
+    description:
+      "We craft digital experiences that captivate audiences and drive growth.",
+    images: [`${SITE_URL}/og-image.png`],
+    creator: "@arxenovasocial",
+    site: "@arxenovasocial",
   },
   robots: {
     index: true,

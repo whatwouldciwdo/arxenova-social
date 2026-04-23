@@ -89,11 +89,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: `${data.title} | Arxenova-Social Portfolio`,
         description: data.desc,
         keywords: ["Arxenova portfolio", data.title, data.meta2, "case study", "digital agency"],
+        alternates: {
+            canonical: `https://arxenovasocial.com/portfolio/${slug}`,
+        },
         openGraph: {
             title: `${data.title} | Arxenova-Social Portfolio`,
             description: data.desc,
             type: "article",
-            images: [{ url: data.img1 }],
+            url: `https://arxenovasocial.com/portfolio/${slug}`,
+            images: [{ url: data.img1, width: 1200, height: 675, alt: data.img1Alt }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${data.title} | Arxenova-Social Portfolio`,
+            description: data.desc,
+            images: [data.img1 || "https://arxenovasocial.com/og-image.png"],
         },
     };
 }
