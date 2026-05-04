@@ -11,6 +11,7 @@ const portfolios = {
     "otobi-auto-detailing": {
         title: "Otobi Auto Detailing",
         clientLogo: "/images/OTOBI-LOGO.jpeg",
+        liveUrl: "https://otobi.id",
         desc: "Arxenova-Social developed a custom landing page and e-commerce checkout system for Otobi Auto Detailing, enhancing their digital storefront.",
         meta1: "Arxenova-Social Design",
         meta2: "Branding, UI.UX",
@@ -26,6 +27,7 @@ const portfolios = {
     "berdikari-raya-services": {
         title: "Berdikari Raya Services",
         clientLogo: "/images/berdikariraya.png",
+        liveUrl: "https://berdikariraya.com",
         desc: "Arxenova-Social partnered with Berdikari Raya Services, a leading company in the carrosserie (auto body manufacturing) industry, to overhaul their digital presence and streamline their web operations.",
         meta1: "Arxenova-Social Marketing",
         meta2: "SEO, SEM, WordPress",
@@ -41,6 +43,7 @@ const portfolios = {
     "putra-jayantara-ananta": {
         title: "Putra Jayantara Ananta (PJA)",
         clientLogo: "/images/PJA-LOGO.png",
+        liveUrl: "https://pjaindonesia.netlify.app",
         desc: "We engineered a robust corporate website and digital catalog for PJA, a prominent supplier of industrial control materials like valves, gas detectors, and electrical PLCs.",
         meta1: "Arxenova-Social Dev",
         meta2: "B2B Web Development",
@@ -165,13 +168,15 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                                 </svg>
                                 <span>{data.meta2}</span>
                             </div>
-                            <a href="#" className="meta-link">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                                </svg>
-                                live Preview
-                            </a>
+                            {data.liveUrl && (
+                                <a href={data.liveUrl} target="_blank" rel="noopener noreferrer" className="meta-link">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                    </svg>
+                                    Live Preview
+                                </a>
+                            )}
                         </div>
                     </div>
 
