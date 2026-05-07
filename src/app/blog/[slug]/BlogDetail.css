@@ -130,6 +130,21 @@
     margin: 0 0 24px;
 }
 
+/* Internal links inside article body */
+.blog-inline-link {
+    color: var(--color-white);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.25);
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.blog-inline-link:hover {
+    color: var(--color-white);
+    text-decoration-color: rgba(255, 255, 255, 0.9);
+}
+
 
 .blog-detail__quote-block {
     text-align: center;

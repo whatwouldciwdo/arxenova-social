@@ -87,11 +87,11 @@
     font-size: 0.85rem;
     color: var(--color-white);
     font-weight: 500;
-    grid-column: 2;
-    
-    grid-row: 1;
+    grid-column: 1 / -1;
     justify-content: flex-start;
     transition: color var(--transition-fast);
+    position: relative;
+    z-index: 1;
 }
 
 .meta-link:hover {

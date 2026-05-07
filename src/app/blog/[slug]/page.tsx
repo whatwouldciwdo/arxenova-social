@@ -19,7 +19,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: `${post.title} | Arxenova-Social Blog`,
         description: post.description,
-        keywords: ["Arxenova blog", post.title, "digital marketing", "social media", "SEO"],
+        keywords: slug === "jasa-website-cilegon-serang-banten"
+            ? ["jasa website Cilegon", "jasa pembuatan website Serang", "jasa website Banten", "website company profile", "digital agency Cilegon", "jasa website profesional Banten", "pembuatan website murah Banten", "Arxenova-Social"]
+            : ["Arxenova blog", post.title, "digital marketing", "social media", "SEO"],
         alternates: {
             canonical: `https://arxenovasocial.com/blog/${slug}`,
         },
