@@ -10,6 +10,7 @@ import logoPic from "../../public/images/logo.png";
 const navLinks = [
     { label: "Projects", href: "/portfolio" },
     { label: "About", href: "/about" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
 ];
@@ -87,6 +88,12 @@ export default function Navbar() {
                     ))}
                     <Link href="/blog" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
                         Blog
+                    </Link>
+                    <Link href="/pricing" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
+                        Pricing
+                    </Link>
+                    <Link href="/faq" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
+                        FAQ
                     </Link>
                     <Link href="/contact" className="navbar__mobile-link navbar__mobile-link--cta" onClick={() => setMenuOpen(false)}>
                         Get in touch

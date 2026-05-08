@@ -40,7 +40,8 @@ export default function Footer() {
                     
                     <div className="footer__block footer__blog-block">
                         <nav className="footer__nav" aria-label="Services and connect">
-                            <Link href="/#services">Services</Link>
+                            <Link href="/pricing">Pricing</Link>
+                            <Link href="/faq">FAQ</Link>
                             <Link href="/team">Team</Link>
                             <Link href="/contact">Contact</Link>
                         </nav>

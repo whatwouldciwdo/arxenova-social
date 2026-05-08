@@ -4,8 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://arxenovasocial.com";
 
     const blogSlugs = [
-        "how-to-create-svg-ready-icon-symbols-in-sketch",
+        "jasa-website-cilegon-serang-banten",
+        "digital-marketing-cilegon-serang-banten",
+        "website-company-profile-profesional",
         "ultimate-guide-modern-seo",
+        "how-to-create-svg-ready-icon-symbols-in-sketch",
     ];
 
     const portfolioSlugs = [
@@ -57,6 +60,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/faq`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.85,
+        },
+        {
+            url: `${baseUrl}/pricing`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
         },
     ];
 
